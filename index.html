@@ -1,21 +1,643 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pandago</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#fff;line-height:1.6}.container{max-width:1100px;margin:auto;padding:24px}.hero{text-align:center;padding:80px 20px}.hero h1{font-size:64px}.hero p{color:#cbd5e1;font-size:22px;margin:20px 0}.btn{display:inline-block;background:#22c55e;color:#fff;padding:15px 28px;border-radius:12px;text-decoration:none;font-weight:bold}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.card{background:#1e293b;padding:24px;border-radius:18px}.section{margin:40px 0}.section h2{text-align:center;margin-bottom:25px;font-size:34px}.link{display:inline-block;margin-top:12px;color:#7dd3fc;text-decoration:none}footer{border-top:1px solid #334155;margin-top:60px;padding:30px 0;color:#94a3b8}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}ul{list-style:none}li{margin:8px 0}a{color:#7dd3fc;text-decoration:none}.badge{display:inline-block;background:#16a34a;padding:6px 12px;border-radius:999px;font-size:13px;margin-bottom:10px}
-</style></head><body><div class="container">
-<section class="hero"><div class="badge">Official Website</div><h1>🐼 Pandago</h1><p>Stay focused. Learn smarter.</p><a class="btn" href="https://play.google.com/store/apps/details?id=com.pandago.app">Download on Google Play</a></section>
-<section class="section"><h2>Why Pandago?</h2><div class="grid">
-<div class="card"><h3>🧠 Stay Focused</h3><p>Reduce distractions while studying and build productive habits.</p></div>
-<div class="card"><h3>🎁 Rewards</h3><p>Earn Bambu, unlock achievements and stay motivated.</p></div>
-<div class="card"><h3>🏆 Quiz Battles</h3><p>Challenge yourself and compete with other learners.</p></div>
-<div class="card"><h3>📈 Progress</h3><p>Track your learning journey and improve every day.</p></div></div></section>
-<section class="section"><h2>Resources</h2><div class="grid">
-<div class="card"><h3>🔒 Privacy Policy</h3><p>Learn how your information is handled.</p><a class="link" href="privacy-policy.html">View →</a></div>
-<div class="card"><h3>📜 Terms of Service</h3><p>Read the rules for using Pandago.</p><a class="link" href="terms-of-service.html">View →</a></div>
-<div class="card"><h3>⚖️ Open Source Licenses</h3><p>Third-party libraries and acknowledgements.</p><a class="link" href="licenses.html">View →</a></div>
-<div class="card"><h3>📢 Advertising Partners</h3><p>Official app-ads.txt used for advertising verification.</p><a class="link" href="app-ads.txt">Open app-ads.txt →</a></div></div></section>
-<section class="section"><h2>Support & Contact</h2><div class="grid">
-<div class="card"><h3>📧 Contact</h3><p>Email: <a href="mailto:localprivacylabs.apps@outlook.com">localprivacylabs.apps@outlook.com</a></p><p>Average response time: within 48 hours.</p><a class="link" href="contact.html">Support Page →</a></div>
-<div class="card"><h3>🏢 Developer</h3><p><strong>Local Privacy Labs</strong></p><p>Independent Android application developer focused on education, productivity and privacy.</p></div></div></section>
-<footer><div class="footer-grid"><div><h3>Pandago</h3><ul><li><a href="https://play.google.com/store/apps/details?id=com.pandago.app">Google Play</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Legal</h3><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="licenses.html">Licenses</a></li></ul></div><div><h3>Resources</h3><ul><li><a href="app-ads.txt">app-ads.txt</a></li></ul></div></div><p style="margin-top:30px;text-align:center;">© 2026 Pandago • Developed by Local Privacy Labs</p></footer>
-</div></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandago</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            background:#0f172a;
+            color:white;
+            line-height:1.7;
+        }
+
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+
+        img{
+            max-width:100%;
+            display:block;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        header{
+
+            position:relative;
+            overflow:hidden;
+
+        }
+
+        .banner{
+
+            width:100%;
+            border-bottom:4px solid #22c55e;
+
+        }
+
+        .hero{
+
+            margin-top:-80px;
+            position:relative;
+            z-index:2;
+
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+
+        }
+
+        .logo{
+
+            width:170px;
+            border-radius:35px;
+
+            background:white;
+
+            padding:15px;
+
+            box-shadow:
+            0 15px 45px rgba(0,0,0,.35);
+
+        }
+
+        h1{
+
+            font-size:58px;
+            margin-top:25px;
+
+        }
+
+        .subtitle{
+
+            color:#cbd5e1;
+            font-size:22px;
+            margin-top:10px;
+
+        }
+
+        .buttons{
+
+            display:flex;
+            gap:15px;
+            margin-top:35px;
+            flex-wrap:wrap;
+            justify-content:center;
+
+        }
+
+        .btn{
+
+            padding:16px 32px;
+
+            border-radius:14px;
+
+            font-weight:bold;
+
+            transition:.25s;
+
+        }
+
+        .primary{
+
+            background:#22c55e;
+
+        }
+
+        .primary:hover{
+
+            background:#16a34a;
+            transform:translateY(-3px);
+
+        }
+
+        .secondary{
+
+            background:#1e293b;
+
+        }
+
+        .secondary:hover{
+
+            background:#334155;
+            transform:translateY(-3px);
+
+        }
+
+        section{
+
+            padding:80px 0;
+
+        }
+
+        h2{
+
+            text-align:center;
+            font-size:40px;
+            margin-bottom:15px;
+
+        }
+
+        .section-text{
+
+            text-align:center;
+            color:#cbd5e1;
+            max-width:750px;
+            margin:auto;
+
+        }
+
+        .cards{
+
+            display:grid;
+
+            grid-template-columns:
+            repeat(auto-fit,minmax(280px,1fr));
+
+            gap:25px;
+
+            margin-top:45px;
+
+        }
+
+        .card{
+
+            background:#1e293b;
+
+            border-radius:20px;
+
+            padding:28px;
+
+            transition:.25s;
+
+            border:1px solid rgba(255,255,255,.05);
+
+        }
+
+        .card:hover{
+
+            transform:translateY(-8px);
+
+            background:#243247;
+
+        }
+
+        .card h3{
+
+            margin-bottom:15px;
+
+        }
+
+        .card p{
+
+            color:#cbd5e1;
+
+        }
+
+        @media(max-width:700px){
+
+            h1{
+
+                font-size:42px;
+
+            }
+
+            .subtitle{
+
+                font-size:18px;
+
+            }
+
+            .hero{
+
+                margin-top:-45px;
+
+            }
+
+            .logo{
+
+                width:120px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <img
+        src="baner.png"
+        class="banner"
+        alt="Pandago Banner">
+
+</header>
+
+<div class="container">
+
+<div class="hero">
+
+    <img
+        src="ikonka_apki.png"
+        class="logo"
+        alt="Pandago Logo">
+
+    <h1>🐼 Pandago</h1>
+
+    <p class="subtitle">
+
+        Learn smarter.
+        Stay focused.
+        Build better habits.
+
+    </p>
+
+    <div class="buttons">
+
+        <a
+            class="btn primary"
+            href="https://play.google.com/store/apps/details?id=com.pandago.app">
+
+            Download on Google Play
+
+        </a>
+
+        <a
+            class="btn secondary"
+            href="#resources">
+
+            Documentation
+
+        </a>
+
+    </div>
+
+</div>
+
+  <section id="apps">
+
+    <h2>Our Apps</h2>
+
+    <p class="section-text">
+        Local Privacy Labs develops modern Android applications focused on
+        education, privacy and productivity.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🐼 Pandago</h3>
+
+            <p>
+                Learn through quizzes, collect rewards, improve your study
+                habits and challenge other players.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🔒 LocalLock</h3>
+
+            <p>
+                Protect your privacy by locking selected applications using
+                your preferred security method.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🚀 More Apps</h3>
+
+            <p>
+                We are constantly working on new Android applications focused
+                on education, privacy and everyday usefulness.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2>Why Choose Pandago?</h2>
+
+    <p class="section-text">
+        Pandago combines learning with gamification to make studying more
+        engaging and motivating.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🧠 Smart Learning</h3>
+
+            <p>
+                Practice knowledge through interactive quizzes.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎮 Gamification</h3>
+
+            <p>
+                Earn rewards, unlock achievements and keep learning every day.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🏆 Quiz Battles</h3>
+
+            <p>
+                Compete against other players in exciting knowledge battles.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📈 Progress</h3>
+
+            <p>
+                Track your improvement and stay motivated.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="resources">
+
+    <h2>Resources</h2>
+
+    <p class="section-text">
+        Documentation and information related to Pandago and Local Privacy Labs.
+    </p>
+
+    <div class="cards">
+
+        <a href="privacy-policy.html" class="card">
+
+            <h3>🔒 Privacy Policy</h3>
+
+            <p>
+                Learn how we handle and protect your information.
+            </p>
+
+        </a>
+
+        <a href="terms-of-service.html" class="card">
+
+            <h3>📜 Terms of Service</h3>
+
+            <p>
+                Read the rules and conditions for using our applications.
+            </p>
+
+        </a>
+
+        <a href="licenses.html" class="card">
+
+            <h3>⚖️ Licenses</h3>
+
+            <p>
+                Third-party software and open-source acknowledgements.
+            </p>
+
+        </a>
+
+        <a href="app-ads.txt" class="card">
+
+            <h3>📢 Advertising Partners</h3>
+
+            <p>
+                Official app-ads.txt file used for advertising verification.
+            </p>
+
+        </a>
+
+        <a href="contact.html" class="card">
+
+            <h3>📧 Contact</h3>
+
+            <p>
+                Support, questions and business inquiries.
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+  <section id="about">
+
+    <h2>About Local Privacy Labs</h2>
+
+    <p class="section-text">
+        Local Privacy Labs is an independent Android app studio creating
+        applications that combine education, privacy, productivity and
+        modern user experience.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🎯 Our Mission</h3>
+
+            <p>
+                We believe mobile applications should be useful,
+                secure and enjoyable to use.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌍 Our Vision</h3>
+
+            <p>
+                To build a growing collection of Android apps that help
+                millions of users learn, stay productive and protect
+                their privacy.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🚀 Current Projects</h3>
+
+            <p>
+                • Pandago<br>
+                • LocalLock<br>
+                • More apps coming soon...
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="support">
+
+    <h2>Support</h2>
+
+    <p class="section-text">
+
+        Need help or have a question?
+
+        We are always happy to help.
+
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>📧 Email</h3>
+
+            <p>
+
+                localprivacylabs.apps@outlook.com
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>⏱ Response Time</h3>
+
+            <p>
+
+                Usually within 48 hours.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌐 Website</h3>
+
+            <p>
+
+                https://pandago.lol
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <hr style="border:none;height:1px;background:#334155;margin-bottom:45px;">
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🐼 Pandago</h3>
+
+            <p>
+                Learn smarter.<br>
+                Stay focused.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📄 Legal</h3>
+
+            <p>
+
+                <a href="privacy-policy.html">Privacy Policy</a><br><br>
+
+                <a href="terms-of-service.html">Terms of Service</a><br><br>
+
+                <a href="licenses.html">Licenses</a>
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📚 Resources</h3>
+
+            <p>
+
+                <a href="app-ads.txt">Advertising Partners</a><br><br>
+
+                <a href="contact.html">Contact</a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div
+        style="
+        text-align:center;
+        margin-top:50px;
+        color:#94a3b8;
+        ">
+
+        © 2026 Local Privacy Labs
+
+    </div>
+
+</footer>
+
+</div>
+
+</body>
+</html>
